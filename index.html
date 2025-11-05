@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Presentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="presentation-header">
+            <h1>The Solar System</h1>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide active" id="slide-1">
+                <img src="slides/slide1.png" alt="Slide 1" class="slide-image">
+            </div>
+            <div class="slide" id="slide-2">
+                <img src="slides/slide2.png" alt="Slide 2" class="slide-image">
+            </div>
+            <div class="slide" id="slide-3">
+                <img src="slides/slide3.png" alt="Slide 3" class="slide-image">
+            </div>
+            <div class="slide" id="slide-4">
+                <img src="slides/slide4.png" alt="Slide 4" class="slide-image">
+            </div>
+            <div class="slide" id="slide-5">
+                <img src="slides/slide5.png" alt="Slide 5" class="slide-image">
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev-btn" class="nav-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                Previous
+            </button>
+            
+            <div class="slide-counter">
+                <span id="current-slide">1</span> / <span id="total-slides">5</span>
+            </div>
+            
+            <button id="next-btn" class="nav-button">
+                Next
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="audio-controls">
+            <button id="record-btn" class="record-button">
+                <svg id="mic-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+                <span id="record-text">Hold to Record</span>
+            </button>
+            
+            <div id="recording-indicator" class="recording-indicator" style="display: none;">
+                <div class="recording-dot"></div>
+                <span>Recording...</span>
+            </div>
+            
+            <div id="audio-status" class="audio-status"></div>
+        </div>
+
+        <!-- Hidden audio element for playback (no controls to prevent replay of input) -->
+        <audio id="audio-playback"></audio>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
